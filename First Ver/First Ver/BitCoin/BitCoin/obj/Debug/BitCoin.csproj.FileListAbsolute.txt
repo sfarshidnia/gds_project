@@ -11,3 +11,10 @@ C:\Users\Mojtaba\Desktop\Samira Fontys\GDS\First Ver\BitCoin\BitCoin\obj\Debug\B
 C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\bin\Debug\BitCoin.exe.config
 C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\obj\Debug\BitCoin.exe
 C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\obj\Debug\BitCoin.pdb
+C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\bin\Debug\BitCoin.exe
+C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\bin\Debug\BitCoin.pdb
+C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\obj\Debug\BitCoin.csprojResolveAssemblyReference.cache
+C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\obj\Debug\BitCoin.Main.resources
+C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\obj\Debug\BitCoin.Properties.Resources.resources
+C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\obj\Debug\BitCoin.Register.resources
+C:\Users\Mojtaba\Documents\GitHub\gds_project\First Ver\First Ver\BitCoin\BitCoin\obj\Debug\BitCoin.csproj.GenerateResource.Cache
