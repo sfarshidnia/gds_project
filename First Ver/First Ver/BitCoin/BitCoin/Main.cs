@@ -65,5 +65,10 @@ namespace BitCoin
                 tb_password.PasswordChar = '\0' ;
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           
+        }
     }
 }

@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,29 +42,33 @@
             this.rtb_ChatHistory = new System.Windows.Forms.RichTextBox();
             this.tb_Message = new System.Windows.Forms.TextBox();
             this.bt_SendMessage = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.LL_Register = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tb_Email = new System.Windows.Forms.TextBox();
             this.tb_password = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel_Buy = new System.Windows.Forms.Panel();
-            this.panel_Sell = new System.Windows.Forms.Panel();
             this.Btn_Buy_cal = new System.Windows.Forms.Button();
             this.Btn_Buy = new System.Windows.Forms.Button();
+            this.panel_Sell = new System.Windows.Forms.Panel();
             this.Btn_Sel_Cal = new System.Windows.Forms.Button();
             this.Btn_Sell = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.rt_News = new System.Windows.Forms.RichTextBox();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.panel_Buy.SuspendLayout();
             this.panel_Sell.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -127,9 +134,9 @@
             // 
             // rtb_ChatHistory
             // 
-            this.rtb_ChatHistory.Location = new System.Drawing.Point(603, 111);
+            this.rtb_ChatHistory.Location = new System.Drawing.Point(603, 280);
             this.rtb_ChatHistory.Name = "rtb_ChatHistory";
-            this.rtb_ChatHistory.Size = new System.Drawing.Size(167, 408);
+            this.rtb_ChatHistory.Size = new System.Drawing.Size(167, 239);
             this.rtb_ChatHistory.TabIndex = 7;
             this.rtb_ChatHistory.Text = "";
             // 
@@ -148,71 +155,6 @@
             this.bt_SendMessage.TabIndex = 9;
             this.bt_SendMessage.Text = "Send";
             this.bt_SendMessage.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(12, 89);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(584, 463);
-            this.tabControl1.TabIndex = 10;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.panel_Sell);
-            this.tabPage1.Controls.Add(this.panel_Buy);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(576, 437);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "BTC/USD";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(576, 437);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "BTC/EUR";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(576, 268);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "BTC/GBP";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(576, 268);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "USD/EUR";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(576, 268);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "GBP/USD";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // LL_Register
             // 
@@ -236,6 +178,7 @@
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Login";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // tb_Email
             // 
@@ -271,6 +214,69 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(576, 437);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "BTC/ZET";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(576, 437);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "BTC/NXT";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(576, 437);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "BTC/DOGE";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(576, 437);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "BTC/PPC";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(576, 437);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "BTC/TRC";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.chart1);
+            this.tabPage1.Controls.Add(this.panel_Sell);
+            this.tabPage1.Controls.Add(this.panel_Buy);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(576, 437);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "BTC/LTC";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
             // panel_Buy
             // 
             this.panel_Buy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -280,16 +286,6 @@
             this.panel_Buy.Name = "panel_Buy";
             this.panel_Buy.Size = new System.Drawing.Size(272, 262);
             this.panel_Buy.TabIndex = 0;
-            // 
-            // panel_Sell
-            // 
-            this.panel_Sell.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel_Sell.Controls.Add(this.Btn_Sell);
-            this.panel_Sell.Controls.Add(this.Btn_Sel_Cal);
-            this.panel_Sell.Location = new System.Drawing.Point(298, 169);
-            this.panel_Sell.Name = "panel_Sell";
-            this.panel_Sell.Size = new System.Drawing.Size(272, 262);
-            this.panel_Sell.TabIndex = 1;
             // 
             // Btn_Buy_cal
             // 
@@ -309,6 +305,16 @@
             this.Btn_Buy.Text = "Buy";
             this.Btn_Buy.UseVisualStyleBackColor = true;
             // 
+            // panel_Sell
+            // 
+            this.panel_Sell.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel_Sell.Controls.Add(this.Btn_Sell);
+            this.panel_Sell.Controls.Add(this.Btn_Sel_Cal);
+            this.panel_Sell.Location = new System.Drawing.Point(298, 169);
+            this.panel_Sell.Name = "panel_Sell";
+            this.panel_Sell.Size = new System.Drawing.Size(272, 262);
+            this.panel_Sell.TabIndex = 1;
+            // 
             // Btn_Sel_Cal
             // 
             this.Btn_Sel_Cal.Location = new System.Drawing.Point(28, 228);
@@ -327,6 +333,47 @@
             this.Btn_Sell.Text = "Sell";
             this.Btn_Sell.UseVisualStyleBackColor = true;
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Location = new System.Drawing.Point(12, 89);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(584, 463);
+            this.tabControl1.TabIndex = 10;
+            // 
+            // rt_News
+            // 
+            this.rt_News.Location = new System.Drawing.Point(603, 111);
+            this.rt_News.Name = "rt_News";
+            this.rt_News.Size = new System.Drawing.Size(167, 163);
+            this.rt_News.TabIndex = 18;
+            this.rt_News.Text = "";
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(6, 6);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Candlestick;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series1.YValuesPerPoint = 4;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(564, 157);
+            this.chart1.TabIndex = 2;
+            this.chart1.Text = "chart1";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +382,7 @@
             this.BackgroundImage = global::BitCoin.Properties.Resources.main1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(794, 557);
+            this.Controls.Add(this.rt_News);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LL_Register);
             this.Controls.Add(this.linkLabel1);
@@ -350,11 +398,12 @@
             this.Text = "Main";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
             this.panel_Buy.ResumeLayout(false);
             this.panel_Sell.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -373,23 +422,26 @@
         private System.Windows.Forms.TextBox tb_Message;
         private System.Windows.Forms.Button bt_SendMessage;
         private System.Windows.Forms.ToolStripMenuItem resetPasswordToolStripMenuItem;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.LinkLabel LL_Register;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TextBox tb_Email;
         private System.Windows.Forms.TextBox tb_password;
-        private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Panel panel_Sell;
         private System.Windows.Forms.Button Btn_Sell;
         private System.Windows.Forms.Button Btn_Sel_Cal;
         private System.Windows.Forms.Panel panel_Buy;
         private System.Windows.Forms.Button Btn_Buy;
         private System.Windows.Forms.Button Btn_Buy_cal;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.RichTextBox rt_News;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }
 
